@@ -1,6 +1,6 @@
 19-Jun-2021
 
-# Simple Shopping Cart App <|> [Live Link](www) 
+# Simple Shopping Cart App <|> [`Live Link`](www) 
 
 ## Topic of Focus:
 * Context API
