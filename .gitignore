@@ -1,0 +1,8 @@
+# dependencies
+/node_modules
+/.firebase
+.firebaserc
+
+# production
+/build
+/z_BackUp_Project_Sorce_Code
