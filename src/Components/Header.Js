@@ -3,14 +3,12 @@ const Header = ({ cartItems }) => {
     return (
         <header className="row block center">
             <div>
-                <a href="#/">
-                    <h1>Small Shopping Cart</h1>
-                </a>
+                <h1>Small Shopping Cart</h1>
             </div>
 
             <div>
                 <a href="#/">Cart {
-                    cartItems?.length ? <span className="items">{cartItems.length}</span> : null
+                    cartItems ? <span className="badge">{cartItems}</span> : null
                 }</a> <a href="#/">SignIn</a>
             </div>
 

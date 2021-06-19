@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+/* https://fonts.google.com/specimen/Nunito */
+
 body {
-  font-family: Arial, Helvetica;
+  font-family: Nunito, Arial;
 }
 
 h1,
@@ -27,6 +30,7 @@ a {
 .row {
   display: flex;
   justify-content: space-between;
+  margin: 3px 0;
 }
 
 .col-1 {
@@ -74,19 +78,26 @@ button.remove {
   background-color: #f04040;
   width: 1.5rem;
 }
-button.badge {
-  background-color: #f04040;
-  border: none;
-  color: #ffffff;
-  width: 1.5rem;
-}
 
 .text-right {
   text-align: right;
 }
 
-.items {
+.badge {
+  display: inline-block;
+  text-align: center;
+  background-color: #f04040;
+  border: none;
+  color: #ffffff;
   width: 20px;
+  padding: 3px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+.quantity {
+  width: 22px;
+  padding: 2px;
   color: #000;
   text-align: center;
   background-color: yellow;

@@ -47,7 +47,7 @@ const App = () => {
 
     return (
         <div>
-            <Header cartItems={cartItems} />
+            <Header cartItems={cartItems?.length} />
 
             <div className="row">
                 <Main products={products} onAdd={onAdd} />
