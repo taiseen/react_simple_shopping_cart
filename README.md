@@ -15,3 +15,6 @@
 * CSS
 * React 
 * GitHub
+
+## Sample Image:
+<img src='./img/1.png'/>
