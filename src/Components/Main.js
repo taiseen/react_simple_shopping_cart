@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { ProductContext } from "./Context/ProductContext";
 import Product from './Product';
 
-const Main = ({ products, onAdd }) => {
+const Main = () => {
+
+    const { products, cartItems, onAdd, onRemoveItem } = useContext(ProductContext);
 
     return (
         <main className="block col-2">
@@ -8,7 +12,12 @@ const Main = ({ products, onAdd }) => {
             <div className="row">
                 {
                     products && products.map(product => (
-                        <Product key={product.id} product={product} onAdd={onAdd} />
+                        <Product
+                            key={product.id}
+                            product={product}
+                            cartItems={cartItems}
+                            onAdd={onAdd}
+                            onRemoveItem={onRemoveItem} />
                     ))
                 }
             </div>

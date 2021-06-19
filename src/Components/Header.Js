@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { ProductContext } from "./Context/ProductContext";
 
-const Header = ({ cartItems }) => {
+const Header = () => {
+
+    const { cartItems } = useContext(ProductContext);
+
     return (
         <header className="row block center">
             <div>
@@ -8,7 +13,9 @@ const Header = ({ cartItems }) => {
 
             <div>
                 <a href="#/">Cart {
-                    cartItems ? <span className="badge">{cartItems}</span> : null
+                    cartItems.length !== 0
+                        ? <span className="badge">{cartItems.length}</span>
+                        : null
                 }</a> <a href="#/">SignIn</a>
             </div>
 

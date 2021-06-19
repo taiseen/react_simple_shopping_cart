@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { ProductContext } from "./Context/ProductContext";
 
-const Basket = ({ cartItems, onAdd, onRemove }) => {
+const Basket = () => {
+
+    const { cartItems, onAdd, onRemove , clearBasket } = useContext(ProductContext);
 
     const itemPrice = cartItems.reduce((total, { price, quantity }) => total + (price * quantity), 0);
     const taxPrice = itemPrice * 0.10;
@@ -22,8 +26,8 @@ const Basket = ({ cartItems, onAdd, onRemove }) => {
                             <div className="col-2">{name}</div>
 
                             <div className="col-2">
-                                <button onClick={() => onAdd(item)} className="add">+</button>
                                 <button onClick={() => onRemove(item)} className="remove">-</button>
+                                <button onClick={() => onAdd(item)} className="add">+</button>
                             </div>
 
                             <div className="col-2 text-right">
@@ -57,13 +61,12 @@ const Basket = ({ cartItems, onAdd, onRemove }) => {
                     </div>
                     <hr />
                     <div className="row">
-                        <button onClick={() => alert("Check Out Successfully...")}>
+                        <button onClick={clearBasket}>
                             Checkout
                         </button>
                     </div>
                 </>
             )}
-
         </aside>
     );
 };
