@@ -1,11 +1,17 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Main from './Components/Main';
+import Basket from './Components/Basket';
+import Header from './Components/Header';
 
 const App = () => {
 
     return (
         <div>
+            <Header />
 
+            <div>
+                <Main />
+                <Basket />
+            </div>
         </div>
     );
 };
