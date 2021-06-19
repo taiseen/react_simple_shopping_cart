@@ -1,6 +1,6 @@
 19-Jun-2021
 
-# Simple Shopping Cart App <|> [`Live Link`](www) 
+# Simple Shopping Cart App <|> [`Live Link`](https://react-simple-shopping-cart-app.netlify.app/) 
 
 ## Topic of Focus:
 * Context API
