@@ -12,36 +12,38 @@ const ProductContextProvider = ({ children }) => {
 
     const onAdd = (product) => {
 
-        // 1st time 
-        // store <== undefined 
         const exist = cartItems.find(item => item.id === product.id)
-        // exist <== undefined 
+        // exist <== undefined | 1st time
 
         if (exist) {
-            const quantity = cartItems.map(item => item.id === product.id
+            const increment = cartItems.map(item => item.id === product.id
                 ? { ...exist, quantity: exist.quantity + 1 }
                 : item
             );
-            setCartItems(quantity);
+            setCartItems(increment);
         } else {
             console.log('1st time ==> undefined...');
-            const quantity = [...cartItems, { ...product, quantity: 1 }];
-            setCartItems(quantity);
+            const withQuantity = [...cartItems, { ...product, quantity: 1 }];
+            setCartItems(withQuantity);
         }
     }
 
     const onRemove = (product) => {
+
         const exist = cartItems.find(item => item.id === product.id);
-        if (exist.quantity === 1) {
+
+        if (exist.quantity === 1) 
+        {
             const remainProduct = cartItems.filter(item => item.id !== product.id);
             setCartItems(remainProduct);
 
-        } else {
-            const quantity = cartItems.map(item => item.id === product.id
+        } else 
+        {
+            const decrement = cartItems.map(item => item.id === product.id
                 ? { ...exist, quantity: exist.quantity - 1 }
                 : item
             );
-            setCartItems(quantity);
+            setCartItems(decrement);
         }
     }
 
